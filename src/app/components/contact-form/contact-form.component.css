@@ -1,0 +1,17 @@
+body {
+    background-color: red; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .btn-primary {
+    background-color: #0c7b93; 
+    border-color: #0c7b93;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #095e6a;
+    border-color: #095e6a;
+  }
+  

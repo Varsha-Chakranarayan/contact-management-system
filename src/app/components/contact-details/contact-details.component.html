@@ -1,0 +1,13 @@
+
+<div *ngIf="contact; else noContact">
+    <h2>{{ contact.name }}</h2>
+    <p>Email: {{ contact.email }}</p>
+    <p>Phone: {{ contact.phone }}</p>
+    <button (click)="editContact(contact.id)">Edit</button>
+    <button (click)="deleteContact(contact.id)">Delete</button>
+  </div>
+  
+  <ng-template #noContact>
+    <p>Contact not found.</p>
+  </ng-template>
+  

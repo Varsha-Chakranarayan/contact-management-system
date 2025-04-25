@@ -1,0 +1,21 @@
+.custom-add-btn {
+    background-color: #0c7b93; 
+    border-color: #0c7b93;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .custom-btn {
+    margin-right: 10px;
+  }
+
+
+  .pagination .page-item.active .page-link {
+    background-color: #0c7b93;
+    border-color: #0c7b93;
+  }
+  
+  .pagination .page-item.disabled .page-link {
+    pointer-events: none;
+    background-color: #f0f0f0;
+  }

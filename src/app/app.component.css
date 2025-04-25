@@ -1,0 +1,15 @@
+/* For customizing the navbar */
+.navbar {
+    margin-bottom: 20px; /* space below the navbar */
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: black; /* White color for the links */
+    font-weight: 500;
+  }
+  .navbar-dark .navbar-toggler-icon {
+    background-color:black /* White color for toggle icon */
+  }
+  .custom-navbar {
+    background-color: #0c7b93;
+  }

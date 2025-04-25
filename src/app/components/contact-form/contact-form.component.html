@@ -1,0 +1,65 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+          <h3 class="text-center mb-4 fw-bold" style="color: #0c7b93;">
+            {{ contactId ? 'Edit Contact' : 'Add Contact' }}
+          </h3>
+
+          <div *ngIf="errorMessage" class="alert alert-danger text-center">
+            {{ errorMessage }}
+          </div>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-floating mb-3">
+              <input
+                type="text"id="name" class="form-control"placeholder="Enter name"formControlName="name"/>
+              <label for="name">Full Name</label>
+              <div
+                *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+                class="text-danger small mt-1"
+              >
+                Name is required.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter email"
+                formControlName="email"
+              />
+              <label for="email">Email address</label>
+              <div
+                *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                class="text-danger small mt-1"
+              >
+                Enter a valid email.
+              </div>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                type="text"
+                id="phone"
+                class="form-control"
+                placeholder="Enter phone"
+                formControlName="phone"
+              />
+              <label for="phone">Phone Number</label>
+              <div
+                *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched"
+                class="text-danger small mt-1"
+              >
+                Enter a valid 10-digit phone number.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+              {{ contactId ? 'Update' : 'Add' }} Contact
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
